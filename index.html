@@ -1,11 +1,442 @@
+﻿
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Hello</title>
-  </head>
-  <body>
-    <h1>I am Patrick.</h1>
-    <h1>?????</h1>
-  </body>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <!--<meta  name="viewport" http-equiv="Content-Type" content="text/html; "/>-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, charset=utf-8" />
+    <title></title>
+
+    <link href="Content/Site.css" rel="stylesheet" />
+    <script src="Script/modernizr-2.6.2.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+    <style type="text/css" style="background-repeat: no-repeat; color: #FFFFFF">
+        .companyname {
+            font-size: 26px;
+        }
+
+        .auto-style1 {
+            font-size: 22px;
+        }
+
+        .aboutme {
+            font-size: 20px;
+        }
+
+        .bigimg-style {
+            width: 724px;
+            height: 474px;
+        }
+
+        .personphoto {
+            position: relative;
+            left: 30px;
+            width: 145px;
+            height: 157px;
+        }
+
+        #introducemyself {
+            position: relative;
+            left: 20px;
+            float: left;
+        }
+
+        .Topphoto {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            text-align: center;
+            align-content: center;
+            justify-content: center;
+        }
+
+        @media only screen and (max-width: 480px) {
+            .bigphoto {
+                display: none;
+                width: 480px;
+                align-content: center;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .bigphoto {
+                display: none;
+                width: 768px;
+                align-content: center;
+            }
+
+            #totop {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .bigphoto {
+                width: 1024px;
+                align-content: center;
+            }
+        }
+
+        .myschool {
+            border-style: solid;
+        }
+
+        .auto-style5 {
+            width: 55px;
+            height: 45px;
+        }
+
+        .auto-style6 {
+            width: 47px;
+            height: 47px;
+        }
+
+        .h2 {
+            align-content: center;
+        }
+
+        .centertxt {
+            font-size: 22px;
+            text-align: left;
+        }
+
+        .title1 {
+            font-size: x-large;
+            font-style: normal;
+            color: darkblue
+        }
+
+        .linestyle {
+            background-repeat: repeat-x
+        }
+
+
+
+        .mycontent {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .frm {
+            position: fixed;
+            width: 50%;
+            height: 50px;
+            overflow: hidden;
+            display: none;
+            z-index: 10;
+        }
+
+        .auto-style9 {
+            width: 172px;
+            height: 174px;
+        }
+
+        .linkstyle {
+            font-size: 22px;
+            position: relative;
+        }
+
+        /*position: fixed;不能加*/
+        /*.nav {
+            position: fixed;
+        }*/
+
+        #desc p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server" style="background-color:aqua;  background-image: url('Image/backpic.gif');">
+        <a style="position:fixed;bottom:70px;right:5px;" href="#" title="Back to Top">
+            <!--BACK TO TOP pictrue-->
+            <img id="totop" style="width:17px; height:75px" src="Image/backtotop.gif" alt="Back to Top" border="0" />
+        </a>
+        <iframe src="navigation.aspx" class="frm"></iframe>
+
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                  
+                    </button>
+                </div>
+                <div class="navbar-default navbar-collapse collapse" style="background-color:black; z-index:5">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#introduce">個人簡介</a></li>
+                        <li><a href="#schools">學歷</a></li>
+                        <li><a href="#works">工作經歷</a></li>
+                        <li><a href="#expertise">技能專長</a></li>
+                        <li><a href="#advantage">非工作領域專長</a></li>
+                        <li><a href="#excersize">活動經歷</a></li>
+                        <li><a href="#contact">聯絡資訊</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <p class="text-center" style="font-family: 微軟正黑體; font-size: 36px; font-style: inherit; font-variant: normal; text-transform: capitalize;">董瑞洋的個人網站</p>
+        <div class="Topphoto">
+            <div class="mycontent">
+                <img class="bigphoto" src="Image/董瑞洋加文字.jpg" /><br />
+            </div>
+        </div>
+
+        <div>
+            <div id="viewPhoto" class="photo float_R" style="margin: 0px; padding: 0px; float: right; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 1px; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+            </div>
+            <div>
+
+                <a name="introduce"> </a>
+                <br />   <br />
+
+                <h2 class="text-center"><strong>個人簡介</strong></h2>
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3 col-lg-1">
+
+                            &nbsp;<img src="Image/個人照.jpg" class="auto-style9" />
+                        </div>
+
+                        <div id="introducemyself" class="col-sm-12 col-md-10 col-lg-8">
+                            <div id="desc" style="float:right">
+                                <p>101年畢業於輔仁大學物理研究所</p>
+                                <p>畢業後共四年的程式設計工作經驗，主要工作內容以網頁設計為主</p>
+                                <p>曾任台灣大學教務處資訊組程式設計師</p>
+                                <p>有Kinect體感控制程式設計經驗</p>
+                                <p>擅長ASP.NET webform網頁設計使用C#</p>
+                                <p>略懂俄文，可用俄語做自我介紹</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a name="schools"></a>
+            <br />
+            <div class="linestyle" id="line01" style="background-image: url('line/line-2.gif'); ">
+                <br />
+            </div>
+            <br /> <br />
+            <h2 class="text-center"><strong>學歷</strong></h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <p class="title1">私立輔仁大學(新北市新莊區)</p>
+                        <p class="auto-style1">物理學系碩士</p>
+                        <p class="auto-style1">2009～2012(畢業)</p>
+                        <p class="auto-style1">論文題目:以B spline為基底計算原子光譜</p>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <p class="title1">私立中原大學(桃園市中壢區)</p>
+                        <p class="auto-style1">物理學系學士</p>
+                        <p class="auto-style1">2005～2009(畢業)</p>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <p class="title1">私立聖約翰科技大學(新北市淡水區)</p>
+                        <p class="auto-style1">電子工程學系五專</p>
+                        <p class="auto-style1" ">2000～2005(畢業)</p>
+                    </div>
+                </div>
+            </div>
+            <br />
+
+            <div id="line2" class="linestyle" style="background-image: url('line/line-11.gif');">
+                <br />
+                <a name="works"></a>
+            </div>
+            <br />
+
+            <br />
+            <h2 class="text-center"><strong>工作經歷 2013~2018</strong></h2>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4">
+                        <p class="companyname"><asp:HyperLink ID="company1" runat="server" NavigateUrl="http://www.aca.ntu.edu.tw/info/service.asp?id=1">台灣大學教務處資訊組</asp:HyperLink>&nbsp;</p>
+                        <p class="auto-style1"> <strong>程式設計師</strong></p>
+                        <p class="auto-style1">
+                            維護北二區夏季學院選課網頁
+                        </p>
+                        <p class="auto-style1">
+                            解決網站所有舊有問題清單共數十項，並且新增網頁功能
+                        </p>
+                        <p class="auto-style1">
+                            使用語言為C#，網站為ASP.NET webform
+                        </p>
+                        <p class="auto-style1">
+                            資料庫維護使用MS  SQL
+                        </p>
+                        <p class="auto-style1">
+                            使用Stored Procedure改善資料庫管理
+                        </p>
+                        <p class="auto-style1">
+                            使用Reporting Service分析選課人數
+                        </p>
+                        <p class="auto-style1">
+                            &nbsp;
+                        </p>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <p class="companyname">
+                            <asp:HyperLink ID="company2" runat="server" NavigateUrl="http://www.jdes.com.tw/">傑迪斯整合行銷股份有限公司</asp:HyperLink>
+                        </p>
+                        <p class="auto-style1">
+                            <strong>
+                                <asp:HyperLink ID="link1" runat="server" NavigateUrl="https://www.facebook.com/nasa.exhibition.taiwan/">NASA展</asp:HyperLink>工讀生
+                            </strong>
+                        </p>
+                        <p class="auto-style1">
+                            此為短期工讀工作，在士林科教館NASA展向客人做展場展覽品導覽。
+                        </p>
+                        <p class="auto-style1"><a href="http://tw.aboluowang.com/2016/0628/761480.html">我在NASA展的受訪影片</a></p>
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <p class="companyname">
+                            <asp:HyperLink ID="company4" runat="server" NavigateUrl="http://www.variox.tw/">南針科技</asp:HyperLink>&nbsp;
+                        </p>
+                        <p class="auto-style1">
+                            <strong>軟體工程師</strong>
+                        </p>
+                        <p class="auto-style1">
+                            維護門禁安全系統Webfrom網頁ASP.NET使用C#
+                        </p>
+                        <p class="auto-style1">
+                            以JQuery改善門禁安全系統Webfrom網頁使用者介面
+                        </p>
+                        <p class="auto-style1">
+                            撰寫視窗程式使用C#
+                        </p>
+                        <p class="auto-style1">
+                            資料庫維護使用MS SQL
+                        </p>
+                        <p class="auto-style1">
+                            &nbsp;
+                        </p>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <p class="companyname">
+                            <asp:HyperLink ID="company3" runat="server" NavigateUrl="http://www.paradisetek.com/">樂升數位行銷</asp:HyperLink>
+                        </p>
+                        <p class="auto-style1">
+                            <strong>軟體工程師&nbsp;</strong>
+                        </p>
+                        <p class="auto-style1">
+                            以JAVA撰寫籃球比賽紀錄Android APP
+                        </p>
+                        <p class="auto-style1">
+                            以PhoneGap開發運動比賽揪團跨平台APP
+                        </p>
+                        <p class="auto-style1">
+                            &nbsp;
+                        </p>
+                        <p class="auto-style1">
+                            &nbsp;
+                        </p>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <p class="companyname">
+                            <asp:HyperLink ID="company5" runat="server" NavigateUrl="http://it.lit.edu.tw/">黎明技術學院資訊科技系</asp:HyperLink>&nbsp;
+                        </p>
+                        <p class="auto-style1">
+                            <strong>專案助理</strong>
+                        </p>
+                        <p class="auto-style1">
+                            以C#撰寫Kinect體感應用程式，共三個
+                        </p>
+                        <p class="auto-style1"><a href="https://www.youtube.com/watch?v=Lv11ZtqzOcg&list=UUkr7qd7Oc3k23C4ZJDsXR1A&index=4&t=0s">以Kinect控制家電開關影片</a></p>
+                        <p class="auto-style1"><a href="https://www.youtube.com/watch?v=KXTtlYz8uMA&index=4&list=UUkr7qd7Oc3k23C4ZJDsXR1A">以Kinect控制自走車移動影片</a></p>
+                        <p class="auto-style1"><a href="https://www.youtube.com/watch?v=RBYwdyTuOCs&list=UUkr7qd7Oc3k23C4ZJDsXR1A&index=1">Kinect體感遊戲影片1</a></p>
+                        <p class="auto-style1"><a href="https://www.youtube.com/watch?v=HHsU-XY-UtA&list=UUkr7qd7Oc3k23C4ZJDsXR1A&index=2">Kinect體感遊戲影片2</a></p>
+                        <p class="auto-style1">
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <div class="linestyle" style="background-image:url('line/line60013.gif')">
+                <a name="expertise"></a><br />
+            </div>
+            <br /><br />
+            <h2 class="text-center"><strong>技能專長</strong></h2>
+            <div class="mycontent">
+                <div>
+                    <p class="centertxt">
+                        以C#維護ASP.NET網站後端和開發Kinect體感互動程式，ASP.NET版本最高使用4.5
+                    </p>
+                    <p class="centertxt">
+                        以Java開發過Android App
+                    </p>
+                    <p class="centertxt">
+                        維護網站前端，曾使用過HTML5、JavaScript、CSS3
+                    </p>
+                    <p class="centertxt">
+                        資料庫管理使用MS SQL，最高版本2017
+                    </p>
+                    <p class="centertxt">
+                        使用FORTRAN 95做原子物理學術研究
+                    </p>
+                </div>
+                <a name="advantage"></a>
+            </div>
+            <br /><br />
+            <h2 class="text-center"><strong>非工作領域專長</strong></h2>
+            <div class="mycontent">
+                <div>
+                    <p class="centertxt">說相聲、攝影、國標舞</p>
+                    <p class="centertxt">曾參加日月潭國標營3次</p>
+                    <p class="centertxt">&nbsp;</p>
+                </div>
+            </div>
+            <div class="linestyle" style="background-image:url('line/line-68.gif')">
+                <br />  <a name="excersize"></a>
+            </div>
+            <h2 class="text-center">&nbsp;</h2>
+
+            <h2 class="text-center"><strong>活動經歷</strong></h2>
+            <div class="mycontent">
+                <div>
+                    <p class="centertxt">1.2018年6~7月白俄羅斯遊學</p>
+                    <p class="centertxt">2.2003年2月紐西蘭王家牧場英語學習成長營</p>
+                    <p class="centertxt">3.三次參加卡內基訓練人際溝通課程,一次學員,二次學長-卡內基訓練2000年8月/2001年8月/2009年7月</p>
+                    <p class="centertxt">&nbsp;</p>
+                </div>
+            </div>
+        </div>
+        <div class="linecover" style="background-image:url('line/line-23.gif')">
+            <a name="contact"></a> <br />
+        </div> <br />
+        <h2 class="text-center"><strong>聯絡資訊</strong></h2>
+        <div class="mycontent">
+            <div style="width:300px; border:medium none #FFFFFF; ">
+                <p class="centertxt">
+                    <a href="https://www.facebook.com/patrick.tung.315"><img class="auto-style5" src="Image/FB.gif" /> 董瑞洋</a>
+                </p>
+                <p class="centertxt"><a href="mailto:koala5858@gmail.com"> <img src="Image/sendmail.jpg" class="auto-style6" /> koala5858@gmail.com </a></p>
+                <p class="centertxt">&nbsp;</p>
+            </div>
+        </div>
+    </form>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="Script/bootstrap.min.js"></script>
+    <script>
+
+        $(function () {
+            $('.navbar-nav a').on('click', function () {
+                $('.navbar-toggle').click();
+            });
+        });
+    </script>
+   
+</body>
 </html>
