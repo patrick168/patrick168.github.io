@@ -141,8 +141,14 @@
             font-size: 18px;
         }
     </style>
+	<script>
+		$(document).ready(function(){
+			$("#totop").fadin("slow");
+		}
+	</script>
 </head>
 <body>
+	
     <form id="form1" runat="server" style="background-color:aqua;  background-image: url('Image/backpic.gif');">
         <a style="position:fixed;bottom:70px;right:5px;" href="#" title="Back to Top">
             <!--BACK TO TOP pictrue-->
@@ -189,22 +195,24 @@
                 <br />   <br />
 
                 <h2 class="text-center"><strong>個人簡介</strong></h2>
+				
                 <div class="container">
-
                     <div class="row">
                         <div class="col-sm-6 col-md-3 col-lg-1">
-
                             &nbsp;<img src="Image/個人照.jpg" class="auto-style9" />
                         </div>
 
-                        <div id="introducemyself" class="col-sm-12 col-md-10 col-lg-8">
-                            <div id="desc" style="float:right">
+                        <div id="introducemyself" class="col-sm-12 col-md-10 col-lg-8">							
+                            <div id="desc" style="float:right">	
+								<p style="background-color: aqua"><b>滑鼠移入後文字即停止滑動</b></p>
+						     <marquee direction="up" onMouseOver="this.stop()" onMouseOut="this.start()" height="250" scrolldelay="4" scrollamount="3">
                                 <p>101年畢業於輔仁大學物理研究所</p>
                                 <p>畢業後共四年的程式設計工作經驗，主要工作內容以網頁設計為主</p>
                                 <p>曾任台灣大學教務處資訊組程式設計師</p>
                                 <p>有Kinect體感控制程式設計經驗</p>
                                 <p>擅長ASP.NET webform網頁設計使用C#</p>
                                 <p>略懂俄文，可用俄語做自我介紹</p>
+							 </marquee>	
                             </div>
                         </div>
                     </div>
@@ -234,7 +242,7 @@
                     <div class="col-sm-12 col-md-6 col-lg-4">
                         <p class="title1">私立聖約翰科技大學(新北市淡水區)</p>
                         <p class="auto-style1">電子工程學系五專</p>
-                        <p class="auto-style1" ">2000～2005(畢業)</p>
+                        <p class="auto-style1">2000～2005(畢業)</p>
                     </div>
                 </div>
             </div>
@@ -252,7 +260,7 @@
             <div class="container">
                 <div class="row">
                    <div class="col-sm-12 col-md-4">
-                        <p class="companyname"><asp:HyperLink ID="company1" runat="server" NavigateUrl="https://apac.coolermaster.com/tw/">酷碼科技</asp:HyperLink>&nbsp;</p>
+                        <p class="companyname"><a href="https://apac.coolermaster.com/tw/">酷碼科技</a>&nbsp;</p>
                         <p class="auto-style1"> <strong>設計工讀生</strong></p>
                         <p class="auto-style1">
                             官網產品頁面改為RWD
@@ -260,12 +268,12 @@
                         <p class="auto-style1">
                            整理公司產品資料
                         </p>                        
-                        <p class="auto-style1">
-                            &nbsp;
+                        <p class="auto-style1">&nbsp;
+                            
                         </p>
                     </div>
                     <div class="col-sm-12 col-md-4">
-                        <p class="companyname"><asp:HyperLink ID="company1" runat="server" NavigateUrl="http://www.aca.ntu.edu.tw/info/service.asp?id=1">台灣大學教務處資訊組</asp:HyperLink>&nbsp;</p>
+                        <p class="companyname"><a href="http://www.aca.ntu.edu.tw/info/service.asp?id=1">台灣大學教務處資訊組</a>&nbsp;</p>
                         <p class="auto-style1"> <strong>程式設計師</strong></p>
                         <p class="auto-style1">
                             維護北二區夏季學院選課網頁
@@ -285,17 +293,17 @@
                         <p class="auto-style1">
                             使用Reporting Service分析選課人數
                         </p>
-                        <p class="auto-style1">
-                            &nbsp;
+                        <p class="auto-style1">&nbsp;
+                            
                         </p>
                     </div>
                     <div class="col-sm-12 col-md-4">
                         <p class="companyname">
-                            <asp:HyperLink ID="company2" runat="server" NavigateUrl="http://www.jdes.com.tw/">傑迪斯整合行銷股份有限公司</asp:HyperLink>
+                            <a href="http://www.jdes.com.tw/">傑迪斯整合行銷股份有限公司</a>
                         </p>
                         <p class="auto-style1">
                             <strong>
-                                <asp:HyperLink ID="link1" runat="server" NavigateUrl="https://www.facebook.com/nasa.exhibition.taiwan/">NASA展</asp:HyperLink>工讀生
+                                <a href="https://www.facebook.com/nasa.exhibition.taiwan/">NASA展</a>工讀生
                             </strong>
                         </p>
                         <p class="auto-style1">
@@ -306,7 +314,7 @@
                     </div>
                     <div class="col-sm-12 col-md-4">
                         <p class="companyname">
-                            <asp:HyperLink ID="company4" runat="server" NavigateUrl="http://www.variox.tw/">南針科技</asp:HyperLink>&nbsp;
+                            <a href="http://www.variox.tw/">南針科技</a>&nbsp;
                         </p>
                         <p class="auto-style1">
                             <strong>軟體工程師</strong>
@@ -323,13 +331,13 @@
                         <p class="auto-style1">
                             資料庫維護使用MS SQL
                         </p>
-                        <p class="auto-style1">
-                            &nbsp;
+                        <p class="auto-style1">&nbsp;
+                            
                         </p>
                     </div>               
                     <div class="col-sm-12 col-md-4">
                         <p class="companyname">
-                            <asp:HyperLink ID="company5" runat="server" NavigateUrl="http://it.lit.edu.tw/">黎明技術學院資訊科技系</asp:HyperLink>&nbsp;
+                            <a href="http://it.lit.edu.tw/">黎明技術學院資訊科技系</a>&nbsp;
                         </p>
                         <p class="auto-style1">
                             <strong>專案助理</strong>
@@ -344,6 +352,7 @@
                         <p class="auto-style1">
                         </p>
                     </div>
+				<!--	<button>下一個</button> -->
                 </div>
             </div>
 
@@ -406,10 +415,20 @@
         <div class="mycontent">
             <div style="width:300px; border:medium none #FFFFFF; ">
                 <p class="centertxt">
-                    <a href="https://www.facebook.com/patrick.tung.315"><img img style="width:50px" src="Image/FB.png" /> 董瑞洋</a>
+                    <a href="https://www.facebook.com/patrick.tung.315">
+						<img style="width:50px" src="Image/FB.png"/> 董瑞洋
+				    </a>
                 </p>
-               <p class="centertxt"><a href="http://tung168.pixnet.net/blog"><img style="width:50px" src="Image/house.png" />希夏普2020的程式天地</a></p>
-                <p class="centertxt"><a href="mailto:koala5858@gmail.com"> <img src="Image/mailpic.png" img style="width:50px" /> koala5858@gmail.com </a></p>
+               <p class="centertxt">
+				   <a href="http://tung168.pixnet.net/blog">
+				     <img style="width:50px" src="Image/house.png" />希夏普2020的程式天地
+				   </a>
+				</p>
+                <p class="centertxt">
+					<a href="mailto:koala5858@gmail.com"> 
+						<img src="Image/mailpic.png" img style="width:50px" /> koala5858@gmail.com 
+					</a>
+				</p>
                 <p class="centertxt">&nbsp;</p>
             </div>
         </div>
